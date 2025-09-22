@@ -1,0 +1,38 @@
+# render.yaml - Infrastructure as Code for Render
+
+services:
+  # 🌐 Frontend (Vite React App)
+  - type: web
+    name: ecommerce-frontend
+    env: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s dist
+    buildFilter:
+      paths:
+        - frontend/**
+    publishPath: dist
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+
+  # ⚙️ Backend (Node.js + Express API)
+  - type: web
+    name: ecommerce-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    buildFilter:
+      paths:
+        - backend/**
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 20.19.0
+      # add your custom env vars here
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false

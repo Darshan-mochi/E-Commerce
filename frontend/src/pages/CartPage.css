@@ -1,0 +1,94 @@
+/* Cart Page (Amazon-like) */
+
+.page-cart {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.cart-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--amazon-text);
+  margin-bottom: 16px;
+}
+
+.cart-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .cart-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+
+.cart-empty {
+  background: var(--amazon-blue-light);
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  padding: 16px;
+  color: var(--amazon-text);
+}
+
+.cart-link { color: var(--amazon-yellow); }
+.cart-link:hover { text-decoration: underline; }
+
+.cart-item {
+  background: var(--amazon-blue-light);
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.item-name { font-weight: 600; color: var(--amazon-text); }
+.item-qty { color: var(--amazon-text-light); margin-top: 4px; }
+.item-right { text-align: right; }
+.item-price { font-weight: 700; color: var(--amazon-text); }
+
+.btn-link {
+  background: none;
+  border: none;
+  color: var(--amazon-yellow);
+  cursor: pointer;
+}
+
+.btn-remove { margin-top: 6px; }
+.btn-link:hover { text-decoration: underline; }
+
+.cart-summary {
+  background: var(--amazon-blue-light);
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  padding: 16px;
+  height: fit-content;
+}
+
+.summary-title { font-weight: 700; color: var(--amazon-text); }
+.summary-row { margin-top: 8px; color: var(--amazon-text); display: flex; justify-content: space-between; }
+.summary-value { font-weight: 700; }
+
+.btn-primary {
+  background: var(--amazon-yellow);
+  border: 1px solid var(--amazon-border);
+  color: #0b1220;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.btn-primary:hover {
+  background: var(--amazon-yellow-dark);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.35), 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.btn-checkout { font-weight: 600; }

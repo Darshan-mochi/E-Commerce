@@ -1,0 +1,148 @@
+/* Product Page (Amazon-like) */
+
+.page-product {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.product-loading {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--amazon-text-light);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.product-image {
+  width: 100%;
+  height: 420px;
+  object-fit: contain;
+  background: var(--amazon-blue-light);
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.product-details {
+  background: var(--amazon-blue-light);
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  color: var(--amazon-text);
+  margin: 4px 0 8px;
+}
+
+.product-description-text {
+  color: var(--amazon-text-light);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 6px 0 10px;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--amazon-text);
+  margin: 8px 0 12px;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.qty-input {
+  width: 80px;
+  height: 36px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: 14px;
+  background: var(--amazon-blue);
+  color: var(--amazon-text);
+}
+
+.qty-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.qty-label {
+  color: var(--amazon-text);
+  font-weight: 600;
+}
+
+/* Remove number input spinners for a cleaner look (still works with arrows/scroll) */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.qty-input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.btn-primary {
+  background: var(--amazon-yellow);
+  border: 1px solid var(--amazon-border);
+  color: #0b1220;
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--amazon-yellow-dark);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.35), 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.add-to-cart {
+  min-width: 160px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px; /* visually aligns with qty input */
+}
+
+/* Responsive: stack actions on small screens */
+@media (max-width: 480px) {
+  .product-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+  .qty-group {
+    justify-content: space-between;
+  }
+  .add-to-cart {
+    width: 100%;
+  }
+}
+

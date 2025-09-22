@@ -1,0 +1,87 @@
+/* Admin Products Page (Amazon-like) */
+
+.page-admin {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.admin-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--amazon-text);
+  margin-bottom: 16px;
+}
+
+.admin-form {
+  background: #fff;
+  border: 1px solid #e3e6e6;
+  border-radius: 8px;
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid #a2a6ac;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .admin-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.admin-card {
+  background: #fff;
+  border: 1px solid #e3e6e6;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card-title {
+  font-weight: 700;
+  color: var(--amazon-text);
+}
+
+.card-line {
+  margin-top: 6px;
+  color: var(--amazon-text);
+}
+
+.card-actions { margin-top: 10px; }
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #0066c0;
+  cursor: pointer;
+}
+
+.btn-link:hover { text-decoration: underline; }
+.btn-delete { color: #b12704; }

@@ -1,0 +1,101 @@
+/* Global Styles and Variables */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--amazon-blue-dark);
+  color: var(--amazon-text);
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a, button, input, select, textarea { transition: all 0.2s ease; }
+
+a {
+  text-decoration: none;
+  color: var(--amazon-yellow); /* neon blue */
+  text-shadow: 0 0 6px rgba(0, 229, 255, 0.35);
+}
+
+a:hover {
+  color: var(--amazon-yellow-dark);
+  text-shadow: 0 0 10px rgba(0, 184, 212, 0.55);
+}
+
+button, .button {
+  background: linear-gradient(180deg, rgba(17,24,39,0.9), rgba(31,41,55,0.9));
+  border: 1px solid var(--amazon-border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--amazon-text);
+  text-align: center;
+  box-shadow: 0 0 0 rgba(0, 229, 255, 0);
+  font-weight: 600;
+}
+
+button:hover, .button:hover {
+  border-color: var(--amazon-yellow);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.35), 0 8px 24px rgba(0,0,0,0.35);
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+/* Neon helpers */
+.neon-card {
+  background: var(--amazon-blue-light);
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  box-shadow: 0 0 0 rgba(168, 85, 247, 0), 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.neon-hover:hover {
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.35), 0 12px 36px rgba(0,0,0,0.45);
+}
+
+/* Home Row */
+.home-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 -10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+

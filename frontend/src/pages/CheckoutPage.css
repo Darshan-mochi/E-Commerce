@@ -1,0 +1,52 @@
+/* Checkout Page (Amazon-like) */
+
+.page-checkout {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.checkout-card {
+  background: #fff;
+  border: 1px solid #e3e6e6;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.checkout-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--amazon-text);
+  margin-bottom: 12px;
+}
+
+.checkout-form {
+  display: grid;
+  gap: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #a6a6a6;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border: 1px solid #a2a6ac;
+  border-color: #a88734 #9c7e31 #846a29;
+  color: #111;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to bottom, #f5d78e, #eeb933);
+}
+
+.btn-place {
+  margin-top: 8px;
+  font-weight: 600;
+}

@@ -1,0 +1,93 @@
+/* Register Page (Amazon-like) with simple CSS classes */
+
+.page-auth {
+  background: var(--amazon-blue-dark);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.auth-container {
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.auth-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--amazon-text);
+}
+
+.auth-subtext {
+  text-align: center;
+  margin-top: 8px;
+  color: var(--amazon-text-light);
+}
+
+.auth-link { color: var(--amazon-yellow); }
+.auth-link:hover { text-decoration: underline; }
+
+.auth-card {
+  background: var(--amazon-blue-light);
+  padding: 24px;
+  border: 1px solid var(--amazon-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  margin-top: 16px;
+}
+
+.auth-error {
+  background: var(--amazon-error-bg);
+  border-left: 4px solid var(--amazon-error);
+  padding: 10px 12px;
+  margin-bottom: 12px;
+}
+
+.auth-error-row { display: flex; gap: 8px; align-items: center; }
+.auth-error-icon { width: 20px; height: 20px; color: var(--amazon-error); }
+.auth-error-text { color: var(--amazon-error); }
+
+.auth-form { display: grid; gap: 14px; }
+.auth-label { display: block; font-size: 14px; color: var(--amazon-text-light); margin-bottom: 6px; }
+.auth-input-wrap { position: relative; }
+.auth-input-icon { position: absolute; left: 10px; top: 50%; transform: translateY(-50%); color: var(--amazon-text-light); }
+
+.auth-input {
+  border: 1px solid var(--amazon-border);
+  border-radius: 8px;
+  padding: 10px 12px 10px 36px;
+  width: 100%;
+  background: var(--amazon-blue);
+  color: var(--amazon-text);
+}
+
+.auth-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 229, 255, 0.25);
+  border-color: var(--amazon-yellow);
+}
+
+.auth-submit {
+  background: var(--amazon-yellow);
+  border: 1px solid var(--amazon-border);
+  color: var(--amazon-text);
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.auth-submit:hover {
+  background: var(--amazon-yellow-dark);
+  box-shadow: 0 0 14px rgba(0, 229, 255, 0.35), 0 8px 24px rgba(0,0,0,0.35);
+}
+
+.auth-spinner { width: 20px; height: 20px; animation: spin 0.9s linear infinite; }
+
+@keyframes spin { to { transform: rotate(360deg); } }
